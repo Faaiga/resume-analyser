@@ -1,20 +1,19 @@
 import type { Route } from "./+types/home";
 import {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {usePuterStore} from "~/lib/puter";
-import {useNavigate} from "react-router";
 import Navbar from "~/components/Navbar";
 import ResumeCard from "~/components/ResumeCard";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Resume Analyser" },
-    { name: "description", content: "Analysing your Resume within seconds!" },
+    { title: "RAzer | Resume Analyzer" },
+    { name: "description", content: "Analyse your Resume within seconds!" },
   ];
 }
 
 export default function Home() {
-  const {isLoading, auth, kv} = usePuterStore();
+  const {auth, kv} = usePuterStore();
   const navigate = useNavigate();
 
   const [resumes, setResumes] = useState<Resume[]>([]);
@@ -32,7 +31,7 @@ export default function Home() {
 
       const resumes = (await kv.list('resume:*', true)) as KVItem[];
 
-      const parsedResumes = resumes ?.map((resume) => (
+      const parsedResumes = resumes?.map((resume) => (
           JSON.parse(resume.value) as Resume
       ))
 
@@ -41,21 +40,22 @@ export default function Home() {
       setResumes(parsedResumes || []);
       setLoadingResumes(false);
     }
-    loadResumes();
+    loadResumes()
   }, []);
 
   return <main className="bg-[url('/images/bg-main.svg')] bg-cover">
     <Navbar/>
+
     <section className="main-section">
       <div className="page-heading py-16">
         <h1>Get Feedback of your Resume Instantly!</h1>
         {!loadingResumes && resumes?.length === 0 ? (
             <h2>
-              No Resumes Found! Upload your first resume to get Feedback instantly.
-            </h2> ): (<h2>Simple.Sleek.Stylish</h2>)
+              No Resumes Found. Upload your first resume to get Feedback instantly.
+            </h2> ): (<h2>Scan. Score. Stand out.</h2>)
         }
       </div>
-      {!loadingResumes && (
+      {loadingResumes && (
           <div className="flex flex-col items-center justify-center">
             <img src="/images/resume-scan-2.gif" className="w-[200px]" />
           </div>
