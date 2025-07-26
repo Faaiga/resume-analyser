@@ -30,7 +30,7 @@ Built with modern tech stacks and serverless magic, RAzer brings resume analysis
 
  1. Clone and Install Dependencies
 
-     npm install
+     npm install,
      npm run dev
     
     Make sure you’ve imported the project and are inside the root directory.
