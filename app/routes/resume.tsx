@@ -95,6 +95,9 @@ const Resume = () => {
                     }
                 </section>
             </div>
+            <div className="flex items-center justify-center m-8">
+                <h3 className="text-sm">RAzer @2025 | developed by Faaiga | All Rights Reserved</h3>
+            </div>
         </main>
     )
 }
