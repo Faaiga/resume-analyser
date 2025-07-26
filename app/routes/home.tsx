@@ -1,10 +1,11 @@
 import type { Route } from "./+types/home";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {usePuterStore} from "~/lib/puter";
 import {useNavigate} from "react-router";
 import Navbar from "~/components/Navbar";
 import ResumeCard from "~/components/ResumeCard";
 import {resumes} from "../../constants";
+import resume from "~/routes/resume";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -14,7 +15,7 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  const {isLoading, auth} = usePuterStore();
+  const {isLoading, auth, fs} = usePuterStore();
   const navigate = useNavigate();
 
   useEffect(() => {
