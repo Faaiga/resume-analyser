@@ -1,87 +1,61 @@
-# Welcome to React Router!
+# ⚡ RAzer — Resume Analyzer with AI-Powered Insights
 
-A modern, production-ready template for building full-stack React applications using React Router.
+RAzer is a smart, stylish resume analysis tool built for candidates and developers who want instant, meaningful feedback on their resumes. Powered by cutting-edge AI (Claude 3-4-Sonnet), it scans uploaded resumes, returns improvement tips, and calculates ATS (Applicant Tracking System) compatibility — all through a clean, intuitive UI.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+Built with modern tech stacks and serverless magic, RAzer brings resume analysis to life.
 
-## Features
+ 🚀 Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+- Upload a resume (`.pdf`) and get INSTANT FEEDBACK from Claude AI
+- AI-generated tips and score based on ATS STANDARD
+- Integrated with JUNIE AI inside WebStorm IDE for performance scoring
+- Stylish UI using TAILWIND CSS and responsive layout
+- Bonus: Sample resume preloaded for quick demo ✨
 
 ---
 
-Built with ❤️ using React Router.
+🛠️ Technologies Used
+
+| Category          | Stack                                       |
+|-------------------|---------------------------------------------|
+| Frontend          | React.js, React Router, TypeScript          |
+| Styling           | Tailwind CSS                                |
+| AI Integration    | Claude 3-4-Sonnet via Puter.js              |
+| Backend/Database  | Serverless: Puter.js File System & Cloud    |
+| IDE Tools         | WebStorm (JetBrains) + Junie AI             |
+
+---
+
+ 🧩 Getting Started
+
+ 1. Clone and Install Dependencies
+
+     npm install
+     npm run dev
+    
+    Make sure you’ve imported the project and are inside the root directory.
+
+  2. Using Puter.js
+     
+  RAzer is built on Puter.js, which enables cloud storage and AI features without a traditional backend.
+  ✅ To use the app:
+  - Sign in to Puter.js (free)
+  - Or create an account at https://puter.com
+  - Basic email verification required
+  Once signed in, you’ll have access to resume scanning, AI feedback, and file storage.
+  
+  
+  3. Sample Resume Included
+     
+  If you don’t have a resume handy:
+  - Just click on the preloaded resume
+  - RAzer will instantly run AI analysis and return smart tips 💬
+    
+  
+  4. ATS Score Powered by Junie
+     
+  RAzer also includes:
+  - ATS evaluation using JetBrains Junie AI
+  - Run inside WebStorm IDE to get scoring benchmarks and resume visibility insights
+  
+      
