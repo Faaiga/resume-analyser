@@ -18,7 +18,7 @@ Built with modern tech stacks and serverless magic, RAzer brings resume analysis
 
 | Category          | Stack                                       |
 |-------------------|---------------------------------------------|
-| Frontend          | React.js, React Router, TypeScript          |
+| Frontend          | React.js, React Router, TypeScript, Vite    |
 | Styling           | Tailwind CSS                                |
 | AI Integration    | Claude 3-4-Sonnet via Puter.js              |
 | Backend/Database  | Serverless: Puter.js File System & Cloud    |
